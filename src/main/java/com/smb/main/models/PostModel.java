@@ -3,6 +3,8 @@ package com.smb.main.models;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -38,6 +40,8 @@ public class PostModel {
 	private String caption;
 	private String image;
 	
+	
+	@JsonIgnore
 	@ManyToOne
 	private UserModel user;
 	private String video;
