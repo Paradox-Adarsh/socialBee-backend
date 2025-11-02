@@ -11,8 +11,11 @@ import com.smb.main.models.UserModel;
 public interface UserRepo extends JpaRepository<UserModel, Integer>{
 	public UserModel findByEmail(String email);
 	
-//	@Query("Select u from UserModel u where u.firsName LIKE%:query% OR u.lastName LIKE%:query% OR u.email LIKE%:query%")
-//	public List<UserModel>searchUser(@Param("query") String query);
+	@Query("SELECT u FROM UserModel u WHERE " +
+		       "LOWER(u.firstName) LIKE LOWER(CONCAT('%', :query, '%')) OR " +
+		       "LOWER(u.lastName) LIKE LOWER(CONCAT('%', :query, '%')) OR " +
+		       "LOWER(u.email) LIKE LOWER(CONCAT('%', :query, '%'))")
+	public List<UserModel>searchUser(@Param("query") String query);
 
 }
  	
