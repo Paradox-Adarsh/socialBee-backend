@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.smb.main.models.PostModel;
 import com.smb.main.response.ApiResponse;
-import com.smb.main.serviceimpl.PostService;
+import com.smb.main.service.PostService;
 
 @RestController
 public class PostController {

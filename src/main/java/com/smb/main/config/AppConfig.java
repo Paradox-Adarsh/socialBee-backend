@@ -18,7 +18,7 @@ public class AppConfig {
 		http.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 				.authorizeHttpRequests(
 						Authorize -> Authorize.requestMatchers("/api/**").authenticated().anyRequest().permitAll())
-				.httpBasic().and().csrf(csrf -> csrf.disable());
+			.csrf(csrf -> csrf.disable());
 		return http.build();
 	}
 

@@ -1,4 +1,4 @@
-package com.smb.main.serviceimpl;
+package com.smb.main.service;
 
 import java.util.List;
 

@@ -11,6 +11,8 @@ import com.smb.main.models.PostModel;
 import com.smb.main.models.UserModel;
 import com.smb.main.repoositories.PostRepo;
 import com.smb.main.repoositories.UserRepo;
+import com.smb.main.service.PostService;
+import com.smb.main.service.UserService;
 
 @Service
 public class PostServiceImpl implements PostService {

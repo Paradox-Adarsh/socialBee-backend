@@ -1,6 +1,5 @@
 package com.smb.main.serviceimpl;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.smb.main.models.UserModel;
 import com.smb.main.repoositories.UserRepo;
+import com.smb.main.service.UserService;
 
 
 @Service
